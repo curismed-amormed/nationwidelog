@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{ asset('vendor/metismenu-master/metisMenu.min.css')}}">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"> -->
+     <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">  -->
     @yield('css')
 </head>
 <body>
@@ -49,7 +49,7 @@
         <li>
             <shape1 class="shape1"></shape1>
             <shape2 class="shape2"></shape2>
-            <a href="patient.html" class="menu-link">
+            <a href="{{ route('patient.index') }}" class="menu-link">
                 <i class="ri-user-line"></i>
                 <span>Patient(s)</span>
             </a>
@@ -57,7 +57,7 @@
         <li>
             <shape1 class="shape1"></shape1>
             <shape2 class="shape2"></shape2>
-            <a href="work-status.html" class="menu-link">
+            <a href="{{ route('work.index') }}" class="menu-link">
                 <i class="ri-briefcase-4-line"></i>
                 <span>Work Status</span>
             </a>
@@ -65,7 +65,7 @@
         <li>
             <shape1 class="shape1"></shape1>
             <shape2 class="shape2"></shape2>
-            <a href="pending-list.html" class="menu-link">
+            <a href="{{ route('pendinglist') }}" class="menu-link">
                 <i class="ri-file-list-3-line"></i>
                 <span>Pending List</span>
             </a>
@@ -73,7 +73,7 @@
         <li>
             <shape1 class="shape1"></shape1>
             <shape2 class="shape2"></shape2>
-            <a href="eremittance.html" class="menu-link">
+            <a href="{{ route('remittance.index') }}" class="menu-link">
                 <i class="ri-wallet-line"></i>
                 <span>E-Remittance</span>
             </a>
@@ -81,7 +81,7 @@
         <li>
             <shape1 class="shape1"></shape1>
             <shape2 class="shape2"></shape2>
-            <a href="medical-record.html" class="menu-link">
+            <a href="{{ route('medical.index') }}" class="menu-link">
                 <i class="ri-file-chart-line"></i>
                 <span>Medical Records</span>
             </a>

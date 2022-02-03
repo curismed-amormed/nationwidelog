@@ -7,8 +7,13 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PracticesController;
 use App\Http\Controllers\DenialController;
 use App\Http\Controllers\ProviderController;
+use App\Http\Controllers\PatientController;
+use App\Http\Controllers\RemittanceController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\MedicalController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -92,4 +97,39 @@ Route::get('/insurance',[ProviderController::class,'view'])->name('insurance-vie
 Route::post('/add-update-insurance', [ProviderController::class, 'insurancestore'])->name('insurance.store');
 Route::post('/edit-insurance', [ProviderController::class, 'insuranceedit'])->name('insurance.edit');
 Route::post('/delete-insurance', [ProviderController::class, 'insurancedestroy'])->name('insurance.delete');
+
+//patient-detail
+Route::get('/patient-detail/{id}',[PatientController::class,'detailindex'])->name('detail.index');
+Route::post('/add-update-patient-detail', [PatientController::class, 'detailstore'])->name('detail.store');
+Route::post('/edit-patient-detail', [PatientController::class, 'detailedit'])->name('detail.edit');
+Route::post('/delete-patient-detail', [PatientController::class, 'detaildestroy'])->name('detail.delete');
+Route::get('/pendinglist',[PatientController::class,'pendinglist'])->name('pendinglist');
+
+//patient
+Route::get('/patient',[PatientController::class,'index'])->name('patient.index');
+Route::post('/add-update-patient', [PatientController::class, 'store'])->name('patient.store');
+Route::post('/edit-patient', [PatientController::class, 'edit'])->name('patient.edit');
+Route::post('/delete-patient', [PatientController::class, 'destroy'])->name('patient.delete');
+Route::get('/getLastName',[PatientController::class,'getLastName'])->name('getLastName');
+Route::get('/getAccount', [PatientController::class, 'getAccount'])->name('getAccount');
+Route::get('/getFirstName', [PatientController::class, 'getFirstName'])->name('getFirstName');
+Route::get('/getDob', [PatientController::class, 'getDob'])->name('getDob');
+
+//e-remittance
+Route::get('/remittance',[RemittanceController::class,'view'])->name('remittance.index');
+Route::post('/add-update-remittance', [RemittanceController::class, 'remittancestore'])->name('remittance.store');
+Route::post('/edit-remittance', [RemittanceController::class, 'remittanceedit'])->name('remittance.edit');
+Route::post('/delete-remittance', [RemittanceController::class, 'remittancedestroy'])->name('remittance.delete');
+
+//work_status
+Route::get('/workstatus',[RemittanceController::class,'index'])->name('work.index');
+Route::post('/add-update-workstatus', [RemittanceController::class, 'store'])->name('workstatus.store');
+Route::post('/edit-workstatus', [RemittanceController::class, 'edit'])->name('workstatus.edit');
+Route::post('/delete-workstatus', [RemittanceController::class, 'destroy'])->name('workstatus.delete');
+
+//medical_records
+Route::get('/medical',[MedicalController::class,'index'])->name('medical.index');
+Route::post('/add-update-medical', [MedicalController::class, 'store'])->name('medical.store');
+Route::post('/edit-medical', [MedicalController::class, 'edit'])->name('medical.edit');
+Route::post('/delete-medical', [MedicalController::class, 'destroy'])->name('medical.delete');
 });

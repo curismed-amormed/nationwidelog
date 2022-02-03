@@ -11,7 +11,7 @@
                                 <h2 class="common-title mb-0">Manage Insurance Name</h2>
                             </div>
                             <div class="align-self-center">
-                            <button type="button" class="btn btn-sm btn-primary"  data-bs-toggle="modal" data-bs-target = "#ajax-insurance-model"><i
+                            <button type="button" class="btn btn-sm btn-primary"   data-bs-toggle="modal" data-bs-target = "#ajax-insurance-model"><i
                                         class='ri-add-line align-middle me-1' id="addNewInsurance"></i>Add Insurance Name</a>
                                 <!-- <div class="btn btn-sm btn-primary" data-bs-toggle="modal">
                                         <button type="button" class='ri-add-line align-middle me-1'id="addNewInsurance"></i>Add Insurance Name</div> -->

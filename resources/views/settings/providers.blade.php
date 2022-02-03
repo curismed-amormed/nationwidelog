@@ -67,7 +67,7 @@
                                     <tr>
                                     <td>{{ $provider->id }}</td>
                                     <td>{{ $provider->first_name }}</td>
-                                <td>{{ $provider->last_name }}</td>
+                                   <td>{{ $provider->last_name }}</td>
                                         <td>
                                             <ul class="list-inline">
                                                 <li class="list-inline-item"><a href="javascript:void(0)" data-id="{{ $provider->id }}"

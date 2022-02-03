@@ -5,18 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Insurance extends Model
+class WorkStatus extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'insurance_name',
-        'status',
-        
-    ];
 
-    
-    public function remittance()
-{
-    return $this->hasMany(Remittance::class); 
-}
+    protected $fillable = [
+        'location',
+        'file_name',
+        'total_pages',
+        'pdf_pages',
+        'status',
+        'work_file',
+    ];
 }
